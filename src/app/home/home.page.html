@@ -1,0 +1,60 @@
+<div class="flex flex-col gap-8">
+  <div class="flex flex-col justify-center gap-4 h-auto md:h-60">
+    <div class="flex flex-col justify-center items-start gap-2">
+      <h1
+        class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl bg-gradient-to-r from-wewak-600 to-wewak-400 inline-block text-transparent bg-clip-text">
+        I&apos;m Phatsanphon Nakaranurak
+      </h1>
+      <p class="text-base md:text-xl text-muted-foreground">
+        Second-Year Information Technology Student with a Focus on Networking & Infrastructure at the School of IT,
+        KMITL.
+      </p>
+    </div>
+
+    <div>
+      <a hlmBtn size="lg" href="/assets/resume.pdf" target="_blank">
+        Resume
+      </a>
+    </div>
+  </div>
+
+  <hr class="scale-100 md:scale-0">
+
+  <div class="flex flex-col justify-center gap-4 h-auto">
+    <h2
+      class="scroll-m-20 text-4xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-wewak-600 to-wewak-400 inline-block text-transparent bg-clip-text">
+      Projects
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+      @for (project of projects; track $index) {
+      <div>
+        <section hlmCard>
+          <div hlmCardHeader>
+            <h3 hlmCardTitle class="scroll-m-20 text-2xl font-semibold tracking-tight">
+              {{ project.name }}
+            </h3>
+          </div>
+          <div hlmCardContent class="flex flex-col gap-2">
+            <div class="flex flex-wrap gap-2">
+              @for (stack of project.stacks; track $index) {
+              <span hlmBadge variant='outline'>{{stack}}</span>
+              }
+            </div>
+            <p hlmCardDescription>
+              {{ project.description }}
+            </p>
+          </div>
+          <div hlmCardFooter>
+            @for (link of project.links; track $index) {
+            <a hlmBtn [href]="link.url" variant="ghost" size="icon">
+              <hlm-icon [name]="link.icon" />
+            </a>
+            }
+          </div>
+        </section>
+      </div>
+      }
+    </div>
+  </div>
+</div>
