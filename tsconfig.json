@@ -21,24 +21,25 @@
       "ES2022",
       "dom"
     ],
+    "baseUrl": "./src",
     "paths": {
       "@ng-components/*": [
-        ".\\src/app/components/ng/*"
+        "app/components/ng/*"
       ],
       "@spartan-ng/ui-button-helm": [
-        ".\\src/app/components/ui/ui-button-helm/src/index.ts"
+        "app/components/ui/ui-button-helm/src/index.ts"
       ],
       "@spartan-ng/ui-badge-helm": [
-        ".\\src/app/components/ui/ui-badge-helm/src/index.ts"
+        "app/components/ui/ui-badge-helm/src/index.ts"
       ],
       "@spartan-ng/ui-card-helm": [
-        ".\\src/app/components/ui/ui-card-helm/src/index.ts"
+        "app/components/ui/ui-card-helm/src/index.ts"
       ],
       "@spartan-ng/ui-icon-helm": [
-        ".\\src/app/components/ui/ui-icon-helm/src/index.ts"
+        "app/components/ui/ui-icon-helm/src/index.ts"
       ],
       "@spartan-ng/ui-sheet-helm": [
-        ".\\src/app/components/ui/ui-sheet-helm/src/index.ts"
+        "app/components/ui/ui-sheet-helm/src/index.ts"
       ]
     }
   },
