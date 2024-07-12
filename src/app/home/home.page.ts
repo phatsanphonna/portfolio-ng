@@ -11,12 +11,12 @@ import {
 } from '@spartan-ng/ui-card-helm';
 import { HlmBadgeDirective } from '@spartan-ng/ui-badge-helm';
 import { provideIcons } from "@ng-icons/core";
-import { lucideGlobe, lucideGithub } from "@ng-icons/lucide";
+import { lucideGlobe, lucideGithub, lucideMail, lucideLinkedin } from "@ng-icons/lucide";
 
 @Component({
   standalone: true,
   templateUrl: './home.page.html',
-  providers: [provideIcons({ lucideGlobe, lucideGithub })],
+  providers: [provideIcons({ lucideGlobe, lucideGithub, lucideMail, lucideLinkedin })],
   imports: [
     HlmButtonDirective,
     HlmIconComponent,
@@ -30,7 +30,22 @@ import { lucideGlobe, lucideGithub } from "@ng-icons/lucide";
   ]
 })
 export class HomePage {
-  projects = [
+  readonly socialMedia = [
+    {
+      icon: 'lucideGithub',
+      url: 'https://github.com/phatsanphonna',
+    },
+    {
+      icon: 'lucideMail',
+      url: 'mailto:phatsanphon2004@outlook.com'
+    },
+    {
+      icon: 'lucideLinkedin',
+      url: 'https://www.linkedin.com/in/phatsanphon-nakaranurak-29ab20231/'
+    }
+  ];
+
+  readonly projects = [
     {
       name: "<i>Judge",
       description: "This app is like a helpful tool for professors teaching problem-solving subjects. It allows them to review and assess students' algorithms, like what LeetCode does. For this project, my friends and I collaborated on building a web app. I took care of the frontend and deployment such as creating docker-compose, reverse proxy. This project is also aligned with our DATABASE SYSTEM CONCEPTS course.",
